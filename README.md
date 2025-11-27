@@ -4,7 +4,7 @@
 [![Made with Python](https://img.shields.io/badge/Python-3.8+-c7a002?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-![example](https://raw.githubusercontent.com/dd555a/bintrade-python/main/examples/example1.png)
+![example](https://raw.githubusercontent.com/dd555a/bintrade-python/blob/main/examples/example1.png)
 
 WIP - not all functionality currently available
 </div>
