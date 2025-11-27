@@ -37,15 +37,29 @@ The same script will append to downloaded data if the csv exists
 5. Set a predict line and evaluate it's accuracy against Average lines (using dcor correlation)
 
 ### Place orders with:
+```bash
 Shift+1 - Stop Market order
+```
+```bash
 Shift+2 - Stop Limit order
+```
+```bash
 Shift+3 - Stop 
+```
 
 ### Adjust orders with:
 ```bash
-Shift+J - decrease price by increment in the config
-Shift+K - Increase price by increment in the config
-Ctrl+J | Ctrl + K - adjust order key 1 - for stop limit, decrease | increase stop limit (% above or bellow order price, shown by dotted line), 
+Shift+J 
+```
+
+#### Increase price by increment in the config
+Decrease price by increment in the config
+```bash
+Shift+K 
+```
+#### Adjust order key 1 - for stop limit, decrease | increase stop limit (% above or bellow order price, shown by dotted line), 
+```bash
+Ctrl+J | Ctrl + K 
 ```
 
 ### Click on the graph to set a point (price and time) then press Shift+K - set order at specific price point
@@ -75,6 +89,5 @@ Change asset shown or date:
 Enter+"ASSETNAME", IE "BTCUSDC" to switch available asset or date in format "YYYY-MM-DD" to change the trading time for historical trading
 
 ### NOTE
-
 NOTE: I am rewriting this project in rust as it has gotten out of hand and is hard to debug. Here:
 https://github.com/dd555a/bintrade_egui
