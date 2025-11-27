@@ -36,33 +36,41 @@ The same script will append to downloaded data if the csv exists
 4. VIM bindings - set orders visually with lines
 5. Set a predict line and evaluate it's accuracy against Average lines (using dcor correlation)
 
-Place orders with:
+# Place orders with:
 Shift+1 - Stop Market order
 Shift+2 - Stop Limit order
 Shift+3 - Stop 
 
-Adjust orders with:
+# Adjust orders with:
+```bash
 Shift+J - decrease price by increment in the config
 Shift+K - Increase price by increment in the config
 Ctrl+J | Ctrl + K - adjust order key 1 - for stop limit, decrease | increase stop limit (% above or bellow order price, shown by dotted line), 
+```
 
-Click on the graph to set a point (price and time) then press Shift+K - set order at specific price point
+# Click on the graph to set a point (price and time) then press Shift+K - set order at specific price point
 
-
-Activate/deactivate orders with (Colors for the lines can be changed in the config):
+# Activate/deactivate orders with (Colors for the lines can be changed in the config):
+```bash
 Shift+A
+```
 
-Trade forward with:
+# Trade forward with:
+```bash
 Shift+L
+```
 
-Undo trade with:
+# Undo trade with:
+```bash
 Shift+Z
+```
 
-Cycle next wicks:
+# Cycle next wicks:
+```bash
 Shift+W
+```
 
-Click on Hist/Live to toggle hist/live
-
+# Click on Hist/Live to toggle hist/live
 Change asset shown or date:
 Enter+"ASSETNAME", IE "BTCUSDC" to switch available asset or date in format "YYYY-MM-DD" to change the trading time for historical trading
 
