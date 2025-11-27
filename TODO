@@ -1,5 +1,5 @@
-1. Fix the bug with data for some intervals not showing (probable duplicate)
-2. Fix the forward/backward buttons, add Shift L Shift Z to undo last trade
-3. Fix live order parser
-4. Fix aline plotting
-4. tutorial gifs 
+Fix the forward/backward buttons, add Shift L Shift Z to undo last trade
+Fix live order parser
+Fix aline plotting
+Add tutorial gifs 
+Fix trade record

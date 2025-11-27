@@ -7,11 +7,3 @@ keyboard
 colorama
 matplotlib
 multiprocesspandas
-scipy
-dcor
-yfinance 
-mplfinance 
-seaborn
-maturin
-pyarrow
-polars

@@ -455,9 +455,6 @@ class live_data:
                 self.send_df()
         if config.live_stats==True:
             #self.append_stats(row, interval)
-            if interval in config.gstats_intv:
-                None
-                #self.coin_data.send_live_gstats(self.current_interval, self.trade_time)
             if interval in config.alines_intv:
                 #self.coin_data.plot_live_alines(interval)
                 None
@@ -581,7 +578,6 @@ class live_data:
         print('All dfs loaded!')
         if config.live_stats==True:
             self.calc_live_stats()
-            #self.coin_data.send_live_gstats(self.current_interval, self.trade_time)
             self.a_lines()
         while True:
             if self.stop==True:
@@ -727,8 +723,6 @@ class data_module:
                 case 6:
                     self.hist_data.delete_order()
                     print('Order Deleted')
-                case 8:
-                    self.hist_data.gstats()
                 case _:
                     print("Trade comm type not found??")
     def place_hist_order(self, O):
@@ -1250,7 +1244,7 @@ class trade_live:
                 self.order_status=O[1]
                 self.order_type=O[2]
                 D={'Symbol':self.SYMBOL, 'Time':self.order_time, 'Order Status':self.order_status, 'Order Type':self.order_type}
-                self.log.write_record(D)
+                #self.log.write_record(D)
 
                 if self.asset1 != 0.0:
                     self.last_asset1=self.asset1
@@ -1291,7 +1285,7 @@ class trade_live:
                     #Retunr last illocs for V1 V2
                     self.log.write(M)
                     D={'Symbol':self.SYMBOL, 'Time':T, 'Order Status':self.order_status, 'Order Type':self.order_type,'Buy_Sell':self.buy_sell,'Order Price':self.order_price, f'{self.S1}':self.asset1, f'{self.S2}':self.asset2, 'Change':self.ch2}
-                    self.log.write_record(D)
+                    #self.log.write_record(D)
 
                 if update_order==True:
                     self.delete_chart_order()

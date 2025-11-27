@@ -18,7 +18,7 @@ from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 
 from multiprocessing import Queue
-from Data import logs, change_timestamp,  return_symb
+from Data import change_timestamp,  return_symb
 
 
 def init_client():
@@ -85,8 +85,6 @@ class ws_client_hybrid:
         self.S1, self.S2=return_symb(self.SYMBOL)
         self.klines=[]
         self.order_update=False
-        self.ws_logs=logs('WS_client_hybrid')
-        self.ws_logs.write('WS_client_hybrid started!')
         print('WS hybrid started')
 
         params=parse_params(self.SYMBOL)
@@ -278,9 +276,7 @@ class ws_client_hybrid:
                             self.klines=[]
                             params=parse_params(self.SYMBOL)
                             self.subscribe_message = {"method": "SUBSCRIBE", "params":params, "id": 1 }
-                            self.ws_logs.write('Send subscribe message')
                             print("Restarting WS module!")
-                            self.ws_logs.write("Restarting WS module!")
                             self.ws_restart=True
                             break
                        try:
@@ -317,7 +313,6 @@ class ws_client_hybrid:
                                    #print(len(M))
                        except Exception: 
                            traceback.print_exc()
-                           self.ws_logs.write(traceback.print_exc())
                            self.ws_restart=True
                            break
                     
@@ -413,8 +408,6 @@ class ws_async:
         self.S1, self.S2=return_symb(self.SYMBOL)
         self.klines=[]
         self.order_update=False
-        self.ws_logs=logs('WS_async')
-        self.ws_logs.write('WS_async started!')
 
         params=parse_params(self.SYMBOL)
         self.stream_names=config.ws_stream_names
@@ -468,7 +461,6 @@ class ws_async:
                             self.S1, self.S2=return_symb(self.SYMBOL)
                             self.klines=[]
                             params=parse_params(self.SYMBOL)
-                            self.ws_logs.write("Restarting WS module!")
                             self.ws_restart=True
                             break
                        try:
@@ -501,7 +493,6 @@ class ws_async:
                                    #print(len(M))
                        except Exception: 
                            traceback.print_exc()
-                           self.ws_logs.write(traceback.print_exc())
                            self.ws_restart=True
                            break
                    await asyncio.sleep(0.001)

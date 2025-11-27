@@ -1,6 +1,6 @@
 #Binance credentials
 API_KEY = '<YOUR API KEY>'
-API_SECRET = 'YOUR API SECRET KEY'
+API_SECRET = '<YOUR API SECRET KEY>'
 
 #Chart config
 extend_range_days=3 
@@ -102,6 +102,9 @@ h_maker_fee=0.00075
 h_default_quant=1
 h_next_wicks=20
 wicks=[1,2,3,5,10,15,20,30,50,100,200,300]
+
+bought_message="Bought!"
+sold_message="Sold!"
 
 #H take screenshot every forward motion:
 hscreenshot=False

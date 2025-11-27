@@ -523,9 +523,9 @@ class live_chart:
 
     def set_marker(self, time, marker_type:int):
         if marker_type==0:
-            self.chart.marker(time, 'below' , 'arrow_up', config.active_buy_col, 'He bought!')
+            self.chart.marker(time, 'below' , 'arrow_up', config.active_buy_col, config.bought_message)
         if marker_type==1:
-            self.chart.marker(time, 'above' , 'arrow_down', config.active_sell_col, 'He sold!')
+            self.chart.marker(time, 'above' , 'arrow_down', config.active_sell_col, config.sold_message)
 
     def del_markers(self):
         self.chart.clear_markers()

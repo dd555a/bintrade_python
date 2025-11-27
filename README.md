@@ -1,5 +1,10 @@
-bintrade-python
+<div align="center">
 
+# bintrade-python
+[![Made with Python](https://img.shields.io/badge/Python-3.8+-c7a002?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+WIP - not all functionality currently available
 
 This is a simple trading app for Linux for Binance using lightweight charts with VIM bindings. Orders can be placed, activated, using Vim bindings configuring your own. Collects tick data and uses order book data for latest price. Simulate trading as well on historic data. 
 
@@ -11,18 +16,25 @@ Features:
 -Set a predict line and evaluate it's accuracy against Average lines (using dcor correlation)
 
 
-How to use:
-Install:
+## How to use:
+### Install:
+```bash
 ./install.sh
+```
 
 Get data from Binance of coins listed in config.py (may take a while):
+```bash
 ./get_data.sh
+```
 
 The same script will append to downloaded data if the csv exists
 
-Run:
+## Run:
+```bash
 ./run.sh
+```
 
+## Features
 Make sure you can run pywebview on your distro, may require to install:
 
 Place orders with:
@@ -47,7 +59,19 @@ Shift+L
 Undo trade with:
 Shift+Z
 
-Note:
-This project is mostly unmaintained as it kind of got out of hand with what I wanted to do with it and continuing it in python became harder and harder to debug, I am redoing it in Rust here:
+Cycle next wicks:
+Shift+W
 
-PRs and suggestions welcome though. 
+Click on Hist/Live to toggle hist/live
+
+Change asset shown or date:
+Enter+"ASSETNAME", IE "BTCUSDC" to switch available asset or date in format "YYYY-MM-DD" to change the trading time for historical trading
+</div>
+
+<div align="center">
+### NOTE
+
+NOTE: I am rewriting this project in rust as it has gotten out of hand and is hard to debug. Here:
+https://github.com/dd555a/bintrade_egui
+</div>
+
