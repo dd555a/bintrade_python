@@ -5,15 +5,10 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 WIP - not all functionality currently available
+</div>
 
 This is a simple trading app for Linux for Binance using lightweight charts with VIM bindings. Orders can be placed, activated, using Vim bindings configuring your own. Collects tick data and uses order book data for latest price. Simulate trading as well on historic data. 
 
-Features:
--Trade live binance assets
--Download historic data and simulate trading
--Calcuate an plot average lines for designated intervals
--VIM bindings - set orders visually with lines
--Set a predict line and evaluate it's accuracy against Average lines (using dcor correlation)
 
 
 ## How to use:
@@ -35,7 +30,11 @@ The same script will append to downloaded data if the csv exists
 ```
 
 ## Features
-Make sure you can run pywebview on your distro, may require to install:
+1. Trade live binance assets
+2. Download historic data and simulate trading
+3. Calcuate an plot average lines for designated intervals
+4. VIM bindings - set orders visually with lines
+5. Set a predict line and evaluate it's accuracy against Average lines (using dcor correlation)
 
 Place orders with:
 Shift+1 - Stop Market order
@@ -66,12 +65,9 @@ Click on Hist/Live to toggle hist/live
 
 Change asset shown or date:
 Enter+"ASSETNAME", IE "BTCUSDC" to switch available asset or date in format "YYYY-MM-DD" to change the trading time for historical trading
-</div>
 
-<div align="center">
 ### NOTE
 
 NOTE: I am rewriting this project in rust as it has gotten out of hand and is hard to debug. Here:
 https://github.com/dd555a/bintrade_egui
-</div>
 
