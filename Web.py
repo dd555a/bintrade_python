@@ -18,11 +18,15 @@ from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 
 from multiprocessing import Queue
-from Data import change_timestamp,  return_symb
+from Data import change_timestamp,  return_symb, read_file
 
 
 def init_client():
-    client = Client(config.API_KEY, config.API_SECRET)
+    pwd = os.getcwd()
+    #key=read_file(pwd,"key")
+    #key_secret=read_file(pwd,"key_secret")
+    client = Client(config.API_KEY, config.API_SECRET) #TODO change back...
+    client = Client(key, key_secret) 
     return client
 
 def parse_to_binance(SYMBOL, order_type, quantity, buy_sell, keys):

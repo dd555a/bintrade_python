@@ -112,3 +112,5 @@ hscreenshot=False
 #0 - wicks - high/low trigger limit orders -
 #1 - open/close value strigger limit orders
 h_eval_mode=0
+
+live_load_hist=False

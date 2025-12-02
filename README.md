@@ -38,6 +38,7 @@ The same script will append to downloaded data if the csv exists
 3. Calcuate an plot average lines for designated intervals
 4. VIM bindings - set orders visually with lines
 5. Set a predict line and evaluate it's accuracy against Average lines (using dcor correlation)
+6. Switch Live/Hist mode with Hist|Live! button. Live price is displayed as a yellow line (I am unable to get the live tick working properly for some reason) taken from the order book websocket info. 
 
 ### Place orders with:
 ```bash

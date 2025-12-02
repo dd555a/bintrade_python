@@ -453,11 +453,11 @@ class live_data:
         if self.GUI==True:
             if interval==self.current_interval:
                 self.send_df()
-        if config.live_stats==True:
+        #if config.live_stats==True:
             #self.append_stats(row, interval)
-            if interval in config.alines_intv:
-                #self.coin_data.plot_live_alines(interval)
-                None
+        #    if interval in config.alines_intv:
+        #        #self.coin_data.plot_live_alines(interval)
+        #        None
 
     def send_df(self):
         if self.GUI==True:
@@ -576,9 +576,9 @@ class live_data:
     async def update_settings(self):
         self.init_dfs()
         print('All dfs loaded!')
-        if config.live_stats==True:
-            self.calc_live_stats()
-            self.a_lines()
+        #if config.live_stats==True:
+        #    self.calc_live_stats()
+        #    self.a_lines()
         while True:
             if self.stop==True:
                 break
@@ -1103,6 +1103,7 @@ class trade_live:
         self.buy_sell=int
         self.order_type=int
         self.trade_time=read_file(pwd+"/CSVData",config.default_symbol+"_Last_Modified")
+
 
         self.asset1=0.0
         self.asset2=0.0
