@@ -1,5 +1,6 @@
-Fix the forward/backward buttons, add Shift L Shift Z to undo last trade
+Fix the backward button, add Shift L Shift Z to undo last trade
 Fix live order parser
 Fix aline plotting
 Add tutorial gifs 
 Fix trade record
+Fix tick | incorporate with extending the nan chart
