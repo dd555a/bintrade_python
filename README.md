@@ -7,7 +7,7 @@
 ![example](https://github.com/dd555a/bintrade_python/blob/main/examples/example1.png)
 
 
-WIP - not all functionality currently available
+### NOTE - THIS PROJECT IS UNMAINTAINED AND HAS BEEN REMADE - https://github.com/dd555a/bintrade_egui 
 </div>
 
 This is a simple trading app for Linux for Binance using lightweight charts with VIM bindings. Orders can be placed, activated, using Vim bindings configuring your own. Collects tick data and uses order book data for latest price. Simulate trading as well on historic data. 
